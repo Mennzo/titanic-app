@@ -2,8 +2,10 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from pathlib import Path
 
-df = pd.read_csv("data/titanic.csv")
+df = pd.read_csv(Path(__file__).resolve().parent / "data" / "titanic.csv")
+# df = pd.read_csv("data/titanic.csv")
 df.columns = df.columns.str.lower()
 
 df["class"] = df["pclass"].map({1: "First", 2: "Second", 3: "Third"})
