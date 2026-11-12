@@ -41,7 +41,8 @@ st.title("Titanic Survival Analysis Dashboard")
 
 st.caption("Explore Titanic passenger data and survival statistics.")
 
-st.image("utils/titanic.jpeg")
+# st.image("utils/titanic.jpeg")
+st.image(str(Path(__file__).resolve().parent / "utils" / "titanic.jpeg"))
 
 show_data = st.checkbox("Show sample data")
 
